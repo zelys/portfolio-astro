@@ -1,0 +1,117 @@
+---
+import Html from "../icons/Tecnologias/Lenguajes/Html.astro";
+import Css from "../icons/Tecnologias/Lenguajes/Css.astro";
+import Java from "../icons/Tecnologias/Lenguajes/Java.astro";
+import SpringBoot from "../icons/Tecnologias/Frameworks_Librerias/SpringBoot.astro";
+import Social_icons from "./Social_icons.astro";
+import Github from "../icons/Social/Github.astro";
+import Python from "../icons/Tecnologias/Lenguajes/Python.astro";
+import Pandas from "../icons/Tecnologias/Frameworks_Librerias/Pandas.astro";
+import Matplotlib from "../icons/Tecnologias/Frameworks_Librerias/Matplotlib.astro";
+import Seaborn from "../icons/Tecnologias/Frameworks_Librerias/Seaborn.astro";
+import Postgresql from "../icons/Tecnologias/Bases_de_datos/Postgresql.astro";
+
+const TAGS = {
+  Html: {
+    name: "Html",
+    class: "bg-[#963419] text-white",
+    icon: Html,
+  },
+  Css: {
+    name: "Css",
+    class: "bg-[#07436b] text-white",
+    icon: Css,
+  },
+  Java: {
+    name: "Java",
+    class: "bg-[#0B1C2C] text-white",
+    icon: Java,
+  },
+  SpringBoot: {
+    name: "SpringBoot",
+    class: "bg-[#142B28] text-white",
+    icon: SpringBoot,
+  },
+  Postgresql: {
+    name: "PostgreSQL",
+    class: "bg-[#0F1A17] text-white",
+    icon: Postgresql,
+  },
+  Python: {
+    name: "Python",
+    class: "bg-[#0D1B2A] text-white",
+    icon: Python,
+  },
+  Pandas: {
+    name: "Pandas",
+    class: "bg-[#1A1614] text-white",
+    icon: Pandas,
+  },
+  Matplotlib: {
+    name: "Matplotlib",
+    class: "bg-[#1B263B] text-white",
+    icon: Matplotlib,
+  },
+  Seaborn: {
+    name: "Seaborn",
+    class: "bg-[#1E1E1E] text-white",
+    icon: Seaborn,
+  }
+};
+
+const PROJECTS = [
+  {
+    title: "Sistema de Gestión Médica (API)",
+    description: "Este proyecto es una API de sistema médico. El backend está construido en Java y utiliza una base de datos PostgreSQL para almacenar la información. El frontend es una página web simple que usa HTML, CSS y JavaScript para la interfaz de usuario.",
+    github: "https://github.com/zelys/sistema-medico",
+    image: "/projects/sysmed.webp",
+    tags: [TAGS.Html, TAGS.Css, TAGS.Java, TAGS.SpringBoot, TAGS.Postgresql],
+  },
+  {
+    title: "Análisis de Evasión de Clientes",
+    description: "Este proyecto se enfoca en el análisis de la evasión de clientes en una empresa de telecomunicaciones. A través de un proceso de ETL (Extracción, Transformación y Carga), análisis exploratorio de datos (EDA) y modelado de machine learning",
+    github: "https://github.com/zelys/analisis-evasion",
+    image: "/projects/analisis-evasion.webp",
+    tags: [TAGS.Python, TAGS.Pandas, TAGS.Matplotlib, TAGS.Seaborn],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {PROJECTS.map(({ image, title, description, tags, github }) => (
+    <article class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+      <div class="w-full md:w-1/2 flex items-center group">
+        <div class="relative flex flex-col items-center transition duration-500 ease-in-out transform shadow-xl overflow-hidden rounded-xl sm:rounded-xl lg:border lg:border-gray-800 group-hover:shadow-2xl">
+          <img alt="Captura del Proyecto" class="object-cover object-top w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <h3 class="text-2xl font-bold mb-2">{title}</h3>
+        <div class="flex flex-wrap mt-2">
+          <ul class="flex flex-row mb-2 gap-x-2">
+            {tags.map((tag) => (
+              <li = {tag.name}>
+                <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="mt-2 text-lg mb-4">{description}</div>
+
+        <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <Social_icons href={github}>
+              <Github class="size-6" />
+              GitHub
+            </Social_icons>
+          )}
+        </footer>
+      </div>
+    </article>
+  ))}
+</div>

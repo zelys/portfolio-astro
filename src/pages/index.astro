@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Linkedin from '../icons/Social/Linkedin.astro'
+import Github from '../icons/Social/Github.astro'
+import Social_icons from '../components/Social_icons.astro'
+import Gmail from '../icons/Social/Gmail.astro'
+import Section from '../components/Section.astro';
+import Section_tecno from '../components/Section_tecno.astro';
+import Tecnologias from '../components/Tecnologias.astro';
+import Code from '../icons/Titulos/Code.astro'
+import Proyectos from '../components/Proyectos.astro'
+import Certificados from '../components/Certificados.astro'
+import Sobre_mi from '../components/Sobre_mi.astro'
+import Cert_icon from '../icons/Titulos/Cert_icon.astro'
+import Me_icons from '../icons/Titulos/Me_icon.astro'
+import Section_sobremi from '../components/Section_sobremi.astro'
+import Footer from '../components/Footer.astro'
+import Section_certificados from '../components/Section_certificados.astro';
+---
+
+<Layout title="Portfolio de Elias - Analista Programador Computacional"
+description="Mi objetivo es aprender y mejorar constantemente, participando en proyectos innovadores que me permitan ampliar mis conocimientos y aportar soluciones creativas y efectivas.">
+	<main class="px-4">
+		<Section>
+			<img class="rounded-full w-20 h-20 mb-4" 
+			src="/img/photo.webp" alt="Elias"
+			/> 
+		<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-5 pb-6 lg:pb-10">
+			Hola, Soy Elias 
+			<a href="https://www.linkedin.com/in/ecelis" target="_blank" rel="noopener"> <div class="flex justify-center items-center hover:scale-110 transition">
+			</div><a/></h1>
+		<h2 class="text-xl lg:text-2xl opacity-80 text-pretty max-w-{700px}">
+			<span class="text-blue-300">Analista Programador Computacional.</span> <br>Profesional titulado en Chile con sólida formación en desarrollo de software y análisis de sistemas. Especializado en crear soluciones tecnológicas eficientes y escalables, con experiencia en múltiples lenguajes de programación y frameworks modernos.
+		</h2>
+		<nav class="flex gap-x-5 mt-6 flex-wrap">
+			<Social_icons href="https://www.linkedin.com/in/ecelis">
+				<Linkedin class="size-4 md:size-6"/>
+				LinkedIn
+			</Social_icons>
+			<Social_icons href="https://github.com/zelys">
+				<Github class="size-4 md:size-6"/>
+				GitHub
+			</Social_icons>
+			<Social_icons href="mailto:zelys.dev@gmail.com">
+				<Gmail class="size-4 md:size-6"/>
+				zelys.dev@gmail.com
+			</Social_icons>
+		</nav>
+		</Section>
+		<Section_tecno id="tecnologias">
+			<Tecnologias/>
+		</Section_tecno>
+		<Section id="proyectos">
+			<div class="flex justify-center">
+				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Code class="size-8 "/>Proyectos </h2>
+			</div>
+			<Proyectos/>
+		</Section>
+		<Section_certificados id="certificados">
+			<div class="flex justify-center">
+				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Cert_icon class="size-8 "/>Certificados </h2>
+			</div>
+			<Certificados/>
+		</Section_certificados>
+		<Section_sobremi id="sobre_mi">
+			<div class="flex justify-center">
+				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Me_icons class="size-8 "/>Sobre mí </h2>
+			</div>
+			<Sobre_mi/>
+		</Section_sobremi>
+		<Footer/>
+	</main>
+	
+</Layout>
