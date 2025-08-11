@@ -5,7 +5,7 @@ import Css from '../icons/Tecnologias/Lenguajes/Css.astro';
 import Js from '../icons/Tecnologias/Lenguajes/Js.astro';
 import Python from '../icons/Tecnologias/Lenguajes/Python.astro';
 import Java from '../icons/Tecnologias/Lenguajes/Java.astro';
-import Bootstrap from '../icons/Tecnologias/Frameworks_Librerias/Bootstrap.astro';
+import Ast from '../icons/Tecnologias/Frameworks_Librerias/Ast.astro';
 import SpringBoot from '../icons/Tecnologias/Frameworks_Librerias/SpringBoot.astro';
 import Pandas from '../icons/Tecnologias/Frameworks_Librerias/Pandas.astro';
 import Matplotlib from '../icons/Tecnologias/Frameworks_Librerias/Matplotlib.astro';
@@ -26,9 +26,9 @@ import Tecno_icon from '../icons/Titulos/Tecno_icon.astro';
     <Tecno_icon class="w-12 h-12" /> Tecnologías
   </h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 p-4">
-    <div>
-      <h2 class="text-2xl opacity-80 mb-6 text-center">Lenguajes</h2>
+  <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12 p-4">
+    <div class="grid grid-cols-1 gap-8">
+      <h2 class="text-2xl opacity-80 md:mb-6 text-center">Lenguajes</h2>
       <nav class="flex flex-wrap justify-center gap-4">
         <Tecnos_icons title="Java"><Java class="w-12 h-12" /></Tecnos_icons>
         <Tecnos_icons title="Python"><Python class="w-12 h-12" /></Tecnos_icons>
@@ -36,24 +36,24 @@ import Tecno_icon from '../icons/Titulos/Tecno_icon.astro';
         <Tecnos_icons title="CSS"><Css class="w-12 h-12" /></Tecnos_icons>
         <Tecnos_icons title="JavaScript"><Js class="w-12 h-12" /></Tecnos_icons>
       </nav>
-      <h2 class="text-2xl opacity-80 mt-8 mb-6 text-center">Frameworks y Librerías</h2>
+      <h2 class="text-2xl opacity-80 md:mt-8 md:mb-6 text-center">Frameworks y Librerías</h2>
       <nav class="flex flex-wrap justify-center gap-4">
         <Tecnos_icons title="SpringBoot"><SpringBoot class="w-12 h-12" /></Tecnos_icons>
+        <Tecnos_icons title="Astro"><Ast class="w-12 h-12" /></Tecnos_icons>
         <Tecnos_icons title="Pandas"><Pandas class="w-12 h-12" /></Tecnos_icons>
         <Tecnos_icons title="Matplotlib"><Matplotlib class="w-12 h-12" /></Tecnos_icons>
         <Tecnos_icons title="Seaborn"><Seaborn class="w-12 h-12" /></Tecnos_icons>
-        <Tecnos_icons title="Bootstrap"><Bootstrap class="w-12 h-12" /></Tecnos_icons>
       </nav>
     </div>
     
-    <div>
-      <h2 class="text-2xl opacity-80 mb-6 text-center">Bases de Datos</h2>
+    <div class="grid grid-cols-1 gap-8">
+      <h2 class="text-2xl opacity-80 md:mb-6 text-center">Bases de Datos</h2>
       <nav class="flex flex-wrap justify-center gap-4">
         <Tecnos_icons title="MySQL"><Mysql class="w-12 h-12" /></Tecnos_icons>
         <Tecnos_icons title="Postgresql"><Postgresql class="w-12 h-12" /></Tecnos_icons>
         <Tecnos_icons title="MongoDB"><Mongo class="w-12 h-12" /></Tecnos_icons>
       </nav>
-      <h2 class="text-2xl opacity-80 mt-8 mb-6 text-center">Herramientas Adicionales</h2>
+      <h2 class="text-2xl opacity-80 md:mt-8 md:mb-6 text-center">Herramientas Adicionales</h2>
       <nav class="flex flex-wrap justify-center gap-4">
         <Tecnos_icons title="Git"><Git class="w-12 h-12" /></Tecnos_icons>
         <Tecnos_icons title="Docker"><Docker class="w-12 h-12" /></Tecnos_icons>

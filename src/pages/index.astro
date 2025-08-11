@@ -4,10 +4,11 @@ import Linkedin from '../icons/Social/Linkedin.astro'
 import Github from '../icons/Social/Github.astro'
 import Social_icons from '../components/Social_icons.astro'
 import Gmail from '../icons/Social/Gmail.astro'
-import Section from '../components/Section.astro';
+import Section_hero from '../components/Section_hero.astro';
 import Section_tecno from '../components/Section_tecno.astro';
 import Tecnologias from '../components/Tecnologias.astro';
 import Code from '../icons/Titulos/Code.astro'
+import Section_proyectos from '../components/Section_proyectos.astro';
 import Proyectos from '../components/Proyectos.astro'
 import Certificados from '../components/Certificados.astro'
 import Sobre_mi from '../components/Sobre_mi.astro'
@@ -20,8 +21,8 @@ import Section_certificados from '../components/Section_certificados.astro';
 
 <Layout title="Portfolio de Elias - Analista Programador Computacional"
 description="Mi objetivo es aprender y mejorar constantemente, participando en proyectos innovadores que me permitan ampliar mis conocimientos y aportar soluciones creativas y efectivas.">
-	<main class="px-4">
-		<Section>
+	<main class="px-4 mx-auto">
+		<Section_hero>
 			<img class="rounded-full w-20 h-20 mb-4" 
 			src="/img/photo.webp" alt="Elias"
 			/> 
@@ -46,16 +47,16 @@ description="Mi objetivo es aprender y mejorar constantemente, participando en p
 				zelys.dev@gmail.com
 			</Social_icons>
 		</nav>
-		</Section>
+		</Section_hero>
 		<Section_tecno id="tecnologias">
 			<Tecnologias/>
 		</Section_tecno>
-		<Section id="proyectos">
+		<Section_proyectos id="proyectos">
 			<div class="flex justify-center">
 				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Code class="size-8 "/>Proyectos </h2>
 			</div>
 			<Proyectos/>
-		</Section>
+		</Section_proyectos>
 		<Section_certificados id="certificados">
 			<div class="flex justify-center">
 				<h2 class="text-4xl font-semibold pb-10 flex gap-x-3 items-center text-center mb-4"> <Cert_icon class="size-8 "/>Certificados </h2>
