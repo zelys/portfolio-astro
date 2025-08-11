@@ -1,4 +1,4 @@
-# Portfolio de Elías Celis
+# Portfolio de Elias Celis
 
 ¡Bienvenido a mi portafolio personal! Este proyecto fue creado con [Astro](https://astro.build/) y estilizado con [Tailwind CSS](https://tailwindcss.com/). Aquí podrás encontrar información sobre mi experiencia, los proyectos en los que he trabajado y las tecnologías que manejo.
 
